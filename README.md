@@ -33,7 +33,6 @@ The pipeline processes videos frame-by-frame or in batches, outputting structure
 - [Testing](#testing)
 - [Outputs](#outputs)
 - [Limitations](#limitations)
-- [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [References](#references)
@@ -292,15 +291,6 @@ python -m pytest tests/integration/test_pipeline.py
 - GPU recommended for real-time; CPU fallback is slower.
 - No built-in tracking; pair with trackers like DeepSORT for persistent IDs.
 - SMPL-based methods assume neutral clothing; performance drops on loose attire.
-
-## Contributing
-
-We welcome contributions! Please:
-1. Fork the repo and create a feature branch.
-2. Add tests for new features.
-3. Submit a PR with detailed description.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
