@@ -1,0 +1,53 @@
+pose_estimation:
+  method: "VIBE"
+  vid_file: "inputs/sample_video.mp4"  # Input Video
+  output_folder: "outputs/vibe/"           # output directory
+  load_pkl_path: "" #"outputs/vibe/running_man_2sec/vibe_output.pkl"
+  plot_skeleton: True
+
+  # visualize the results of each step during demo
+  display: True           
+  
+  # run smplify for refining the results, you need pose tracking to enable it
+  run_smplify: False # False
+
+  # save results as .obj files.
+  save_obj: False
+
+  # smooth the results to prevent jitter
+  smooth: False # False
+
+  # one euro filter min cutoff.
+  # Decreasing the minimum cutoff frequency decreases slow speed jitter
+  smooth_min_cutoff: 0.004  
+
+  # one euro filter beta.
+  # Increasing the speed coefficient(beta) decreases speed lag.        
+  smooth_beta: 0.7
+
+  # tracking method to calculate the tracklet of a subject from the input video
+  tracking_method: 'vitpose' # choices=['bbox', 'pose'] 'yolopose', 'vitpose'
+  
+  # object detector for bbox tracking
+  detector: 'yolo'        # choices=['yolo', 'maskrcnn']
+  
+  # input image size for yolo detector
+  yolo_img_size: 416
+  
+  # batch size of object detector used for bbox tracking
+  tracker_batch_size: 12
+  
+  # batch size of VIBE
+  vibe_batch_size: 450
+
+  # disable final rendering of output video
+  no_render: False
+
+  # render all meshes as wireframes
+  wireframe: False
+
+  # render meshes from alternate viewpoint
+  sideview: False
+
+  # path to directory STAF pose tracking method installed
+  staf_dir: '/home/maxali/STAF/' # '/home/mkocabas/developments/openposetrack'

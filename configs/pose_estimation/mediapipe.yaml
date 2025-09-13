@@ -1,0 +1,18 @@
+pose_estimation:
+  model_complexity: 2
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.6
+  max_num_faces: 1
+  refine_face_landmarks: False
+  min_detection_confidence_face: 0.5
+  min_tracking_confidence_face: 0.6
+  keypoints_type: ["face", "hands", "poses"]
+  is_smoothing: False
+  is_filtering_missing_parts: False
+
+  method: "mediapipe-holistic" # ["vibe", "mediapipe-separated", "mediapipe-holistic"]
+  source: "sample_videos/running_man_2sec.mp4" # "sample_videos/run/video-6.avi" # 
+  output_folder: "outputs/keypoints"
+  save_data: True
+  show_keypoints: True
+  show_3d: True

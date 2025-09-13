@@ -1,0 +1,21 @@
+pose_estimation:
+  method: "TCMR"
+  vid_file: "inputs/masked_running_man_2sec.mp4"  # Input Video
+  img_dir: ''                          # input images path
+  gender: 'neutral'                    # set gender of people from (neutral, male, female)
+  gpu: 0  # gpu num
+
+  # pretrained
+  model: './pose_estimation_3d/TCMR/data/base_data/tcmr_demo_model.pth.tar'
+  detector: 'yolo'                # choices=['yolo', 'maskrcnn']
+  yolo_img_size: 416
+  tracker_batch_size: 12
+  
+  # save results
+  output_path: "outputs/tcmr/"    # output directory
+  display: True                   # visualize the results of each step
+  save_pkl: True                  # save results to a pkl file
+  save_obj: False                 # save results to .obj file
+  render_plain: False             # render meshes on plain background
+  wireframe: False                # render all meshes as wireframes
+  sideview: False                 # render meshes from alternate viewpoint
