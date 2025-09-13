@@ -1,0 +1,8 @@
+# For mp_pose_estimation
+json
+PyYAML
+numpy
+matplotlib
+mpl_toolkits
+mediapipe == 0.10.15
+opencv-python == 4.10.0

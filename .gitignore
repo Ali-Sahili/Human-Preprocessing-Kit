@@ -1,0 +1,24 @@
+
+# Remove vibe_data
+humanproc_utils/pose_estimation_3d/vibe/data/
+
+# Remove TCMR data
+humanproc_utils/pose_estimation_3d/TCMR/data/
+
+# Remove pycaches
+**/__pycache__/
+
+# Inputs and outputs data
+inputs/
+outputs/
+
+# remove weights
+weights/
+*.pt
+
+# poseformerv2 weights
+humanproc_utils/build_dataset/PoseFormerV2/checkpoint/
+humanproc_utils/build_dataset/PoseFormerV2/lib/checkpoint/
+
+# kptformer weights
+humanproc_utils/build_dataset/KTPFormer/checkpoint/
